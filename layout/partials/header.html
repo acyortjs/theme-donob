@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="center">
+        <h1><a href="{{ data.config.root }}/">{{ data.config.title }}</a></h1>
+        <div class="menu_btn"></div>
+        <p>{{ data.config.description }}</p>
+    </div>
+</div>
+
+<div class="menu">
+    {% for menu in data.config.menu %}
+    <a href="{{ menu }}">{{ loop.key }}</a>
+    {% endfor %}
+</div>

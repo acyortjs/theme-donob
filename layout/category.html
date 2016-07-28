@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% import 'partials/pagination.html' as pagination %}
+{% import 'partials/posts.html' as posts %}
+
+{% block title %}
+{{ category.heading }} - {{ data.config.title }}
+{% endblock %}
+
+{% block content %}
+{{ posts.render(category, helper) }}
+{{ pagination.render(category) }}    
+{% endblock %}

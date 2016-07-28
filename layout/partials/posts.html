@@ -1,0 +1,24 @@
+{% macro render(type, helper) %}
+
+<div id="posts" class="center">
+
+    <ul>
+    {% for id in type.posts %}
+    {% set post = helper.post(id) %}
+        <li>
+            <h2>
+            {% if post.thumb %}
+            <a data-thumb="{{ post.thumb }}" href="{{ post.url }}">{{ post.title }}</a>
+            {% else %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {% endif %}
+            </h2>
+
+            <p class="time">{{ helper.time(post.updated, 'MMMM DD, YYYY') }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+</div>
+
+{% endmacro %}
