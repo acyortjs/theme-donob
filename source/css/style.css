@@ -105,21 +105,24 @@ a {
 #post {
     margin-top: 70px;
 }
+.content {
+    margin-top: 70px;
+}
 
 /* article content */
 .content {
+    color: #4c4c4c;
+}
+.content p {
     font-size: 16px;
     line-height: 1.7;
-    color: #4c4c4c;
+    margin-bottom: 16px;
 }
 .content h1, .content h2, .content h3, .content h4, .content h5 {
     font-weight: 700;
     margin-bottom: 14px;
-    margin-top: 26px;
+    margin-top: 24px;
     color: #484848;
-}
-.content p {
-    margin-bottom: 16px;
 }
 .content h5 {
     font-size: 16px;
@@ -132,18 +135,30 @@ a {
 }
 .content h2 {
     font-size: 22px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #eee;
 }
 .content h1 {
     font-size: 24px;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #eee;
 }
 .content blockquote {
-    margin: 14px;
-    padding-left: 30px;
-    border-left: 3px solid #999;
+    margin: 20px 0;
+    color: #7b7b7b;
+    position: relative;
+    padding: 0 40px;
+}
+.content blockquote:before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 40px;
+}
+.content blockquote p {
+    margin-bottom: 8px;
+    font-style: italic;
 }
 .content a {
     color: #333;
@@ -158,15 +173,17 @@ a {
 }
 .content ul, .content ol {
     margin: 10px 0;
-    padding-left: 25px;
+    padding-left: 0;
 }
 .content ul li {
     list-style: disc;
     margin-top: 4px;
+    line-height: 1.6;
 }
 .content ol li {
     list-style: decimal;
     margin-top: 4px;
+    line-height: 1.6;
 }
 .content img {
     margin-top: 14px;
@@ -179,12 +196,11 @@ code {
     background: #f7f7f7;
     border: 1px solid #e6e6e6;
     padding: 1px 5px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 1px;
 }
 
 table {
+    line-height: 1.5;
     margin-bottom: 10px;
     padding: 0;
     border-collapse: collapse;
@@ -218,74 +234,94 @@ table tr th :last-child, table tr td :last-child {
     margin-bottom: 0;
 }
 
-/**
- * GitHub Gist Theme
- * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
- */
+/* Ocean Dark Theme */
+/* https://github.com/gavsiu */
+/* Original theme - https://github.com/chriskempson/base16 */
 
-pre code {
-  display: block;
-  padding: 14px;
-  color: #333;
-  overflow-x: auto;
-  line-height: 1.4;
-}
-
+/* Ocean Comment */
 .hljs-comment,
-.hljs-meta {
-  color: #969896;
+.hljs-quote {
+  color: #65737e;
 }
 
-.hljs-string,
+/* Ocean Red */
 .hljs-variable,
 .hljs-template-variable,
-.hljs-strong,
-.hljs-emphasis,
-.hljs-quote {
-  color: #df5000;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-type {
-  color: #a71d5d;
-}
-
-.hljs-literal,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-attribute {
-  color: #0086b3;
-}
-
-.hljs-section,
-.hljs-name {
-  color: #63a35c;
-}
-
-.hljs-tag {
-  color: #333333;
-}
-
-.hljs-title,
-.hljs-attr,
+.hljs-tag,
+.hljs-name,
 .hljs-selector-id,
 .hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo {
-  color: #795da3;
-}
-
-.hljs-addition {
-  color: #55a532;
-  background-color: #eaffea;
-}
-
+.hljs-regexp,
 .hljs-deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
+  color: #bf616a;
 }
 
+/* Ocean Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
 .hljs-link {
-  text-decoration: underline;
+  color: #d08770;
+}
+
+/* Ocean Yellow */
+.hljs-attribute {
+  color: #ebcb8b;
+}
+
+/* Ocean Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #a3be8c;
+}
+
+/* Ocean Blue */
+.hljs-title,
+.hljs-section {
+  color: #8fa1b3;
+}
+
+/* Ocean Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b48ead;
+}
+
+pre {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #2b303b;
+}
+
+pre code {
+  max-width: 600px;
+  width: 100%;
+  background: transparent;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  color: #c0c5ce;
+  padding: 20px 0;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: monospace;
+  border: none;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }
