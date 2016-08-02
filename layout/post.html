@@ -7,15 +7,13 @@
 {% block content %}
 <div id="post" class="center">
 
-    <h1>{{ post.title }}</h1>
+    <h1 class="title">{{ post.title }}</h1>
 
     <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
 
-    <p>{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
+    <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
 
-    {% for category in post.categories %}
-    <a href="{{ category.url }}">{{ category.name}}</a> -
-    {% endfor %}
+    {% for category in post.categories %}<a href="{{ category.url }}">{{ category.name}}</a>{% endfor %}
 
     <div class="relate">
     {% if post.prev %}

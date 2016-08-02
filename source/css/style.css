@@ -101,6 +101,11 @@ a {
     color: #42449D;
 }
 
+/* post */
+#post {
+    margin-top: 70px;
+}
+
 /* article content */
 .content {
     font-size: 16px;
