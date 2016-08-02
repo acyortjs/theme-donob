@@ -1,12 +1,8 @@
 {% macro render(pagination) %}
 
-<div id="pagination">
+<div id="pagination" class="center">
     {% if pagination.prev %}
-    <a rel="prev" href="{{ pagination.prev }}">← Newer Posts</a>
-    {% endif %}
-
-    {% if pagination.paginator %}
-    <div class="paginator">{% autoescape false %}{{ pagination.paginator }}{% endautoescape %}</div>
+    <a rel="prev" href="{{ pagination.prev }}">Newer Posts →</a>
     {% endif %}
 
     {% if pagination.next %}

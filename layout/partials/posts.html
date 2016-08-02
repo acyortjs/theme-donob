@@ -1,8 +1,8 @@
 {% macro render(type, helper) %}
 
-<div id="posts" class="center">
+<div id="posts">
+    <ul class="center">
 
-    <ul>
     {% for id in type.posts %}
     {% set post = helper.post(id) %}
         <li>
@@ -14,11 +14,11 @@
             {% endif %}
             </h2>
 
-            <p class="time">{{ helper.time(post.updated, 'MMMM DD, YYYY') }}</p>
+            <p>{{ helper.time(post.updated, 'MMMM DD, YYYY') }}</p>
         </li>
     {% endfor %}
-    </ul>
 
+    </ul>
 </div>
 
 {% endmacro %}
