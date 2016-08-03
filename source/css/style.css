@@ -108,6 +108,34 @@ a {
 .content {
     margin-top: 70px;
 }
+.time {
+    margin-top: 50px;
+    color: #999;
+}
+.cat {
+    margin-top: 20px;
+}
+.cat p {
+    margin-bottom: 10px;
+    color: #999;
+}
+.cat a {
+    color: #333;
+}
+.cat a:hover {
+    text-decoration: underline;
+}
+.relate {
+    margin-top: 70px;
+}
+.relate a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+.relate a:hover {
+    color: #333;
+}
 
 /* article content */
 .content {

@@ -13,18 +13,24 @@
 
     <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
 
-    {% for category in post.categories %}<a href="{{ category.url }}">{{ category.name}}</a>{% endfor %}
+    <div class="cat">
+    {% for category in post.categories %}
+    <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
+    {% endfor %}
+    </div>
 
     <div class="relate">
     {% if post.prev %}
     {% set prev = helper.post(post.prev) %}
-    <a rel="prev" href="{{ prev.url }}">← {{ prev.title }}</a>
+    <a rel="prev" href="{{ prev.url }}">PREV: {{ prev.title }}</a>
     {% endif %}
 
     {% if post.next %}
     {% set next = helper.post(post.next) %}
-    <a rel="next" href="{{ next.url }}">{{ next.title }} →</a>
+    <a rel="next" href="{{ next.url }}">NEXT: {{ next.title }}</a>
     {% endif %}
+
+    <a rel="all" href="{{ data.config.root }}/">VIEW ALL POSTS</a>
     </div>
 
 </div>
