@@ -9,28 +9,32 @@
 
     <h1 class="title">{{ post.title }}</h1>
 
-    <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
+    <div class="left">
+        <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
+    </div><!--
 
-    <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
+ --><div class="right">
+        <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
 
-    <div class="cat">
-    {% for category in post.categories %}
-    <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
-    {% endfor %}
+        <div class="cat">
+        {% for category in post.categories %}
+        <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
+        {% endfor %}
+        </div>
     </div>
 
     <div class="relate">
-    {% if post.prev %}
-    {% set prev = helper.post(post.prev) %}
-    <a rel="prev" href="{{ prev.url }}">PREV: {{ prev.title }}</a>
-    {% endif %}
+        {% if post.prev %}
+        {% set prev = helper.post(post.prev) %}
+        <p><span>PREV: </span><a rel="prev" href="{{ prev.url }}">{{ prev.title }}</a></p>
+        {% endif %}
 
-    {% if post.next %}
-    {% set next = helper.post(post.next) %}
-    <a rel="next" href="{{ next.url }}">NEXT: {{ next.title }}</a>
-    {% endif %}
+        {% if post.next %}
+        {% set next = helper.post(post.next) %}
+        <p><span>NEXT: </span><a rel="next" href="{{ next.url }}">{{ next.title }}</a></p>
+        {% endif %}
 
-    <a rel="all" href="{{ data.config.root }}/">VIEW ALL POSTS</a>
+        <p><span></span><a rel="all" href="{{ data.config.root }}/">VIEW ALL POSTS</a></p>
     </div>
 
 </div>

@@ -19,8 +19,8 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: #FCF8EC;
-    color: #42449D;
+    background: #fff;
+    color: #666;
     min-height: 100%;
 }
 
@@ -29,7 +29,7 @@ a {
 }
 
 .center {
-    max-width: 600px;
+    max-width: 1000px;
     width: 94%;
     margin-left: auto;
     margin-right: auto;
@@ -92,25 +92,41 @@ a {
     margin-top: 70px;
 }
 .footer .center {
-    border-top: 1px solid #e0ddd2;
-    padding: 30px 0;
+    border-top: 1px solid #eee;
+    padding: 50px 0;
     font-size: 14px;
 }
 .footer a {
     text-decoration: underline;
-    color: #42449D;
+    color: #666;
 }
 
 /* post */
 #post {
     margin-top: 70px;
 }
-.content {
-    margin-top: 70px;
+.left, .right {
+    display: inline-block;
+    margin-top: 40px;
+    vertical-align: top;
+}
+.left {
+    width: 60%;
+    margin-left: 20%;
+}
+.right {
+    width: 17%;
+    margin-left: 3%;
+}
+.title {
+    color: #222;
+    font-size: 46px;
+    line-height: 1.4;
 }
 .time {
-    margin-top: 50px;
     color: #999;
+    margin-top: 20px;
+    font-size: 14px;
 }
 .cat {
     margin-top: 20px;
@@ -128,29 +144,38 @@ a {
 .relate {
     margin-top: 70px;
 }
+.relate p {
+    margin-bottom: 16px;
+}
 .relate a {
-    display: block;
-    margin-bottom: 10px;
-    color: #666;
+    color: #333;
 }
 .relate a:hover {
-    color: #333;
+    text-decoration: underline;
+}
+.relate span {
+    width: 60px;
+    display: inline-block;
 }
 
 /* article content */
 .content {
-    color: #4c4c4c;
+    color: #333;
 }
 .content p {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 16px;
+}
+.content p:first-child {
+    margin-top: 20px;
 }
 .content h1, .content h2, .content h3, .content h4, .content h5 {
     font-weight: 700;
     margin-bottom: 14px;
-    margin-top: 24px;
-    color: #484848;
+    margin-top: 20px;
+    color: #222;
+    line-height: 1.4;
 }
 .content h5 {
     font-size: 16px;
@@ -163,26 +188,26 @@ a {
 }
 .content h2 {
     font-size: 22px;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     border-bottom: 1px solid #eee;
 }
 .content h1 {
     font-size: 24px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #eee;
 }
 .content blockquote {
-    margin: 20px 0;
+    margin: 36px 0;
     color: #7b7b7b;
     position: relative;
-    padding: 0 40px;
+    padding: 0 32px;
 }
 .content blockquote:before {
     content: '"';
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 40px;
+    font-size: 36px;
 }
 .content blockquote p {
     margin-bottom: 8px;
@@ -193,11 +218,14 @@ a {
     text-decoration: underline;
 }
 .content hr {
-    height: 3px;
-    width: 100%;
-    margin: 20px auto;
-    background: #eee;
     border: none;
+    text-align: center;
+    margin: 36px 0;
+}
+.content hr:after {
+    content: '· · ·';
+    font-size: 20px;
+    color: #999;
 }
 .content ul, .content ol {
     margin: 10px 0;
