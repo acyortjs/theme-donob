@@ -75,6 +75,7 @@ a {
 /* posts */
 #posts {
     margin-top: 100px;
+    padding-bottom: 50px;
 }
 #posts .year:nth-child(1) {
     border-top: none;
@@ -82,7 +83,7 @@ a {
 .year {
     border-top: 1px solid #eee;
     font-size: 16px;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-top: 60px;
     margin-bottom: -16px;
     color: #999;
@@ -90,7 +91,7 @@ a {
 .entry {
     margin-left: 20%;
     width: 80%;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
     font-size: 16px;
 }
 .entry a {
@@ -108,11 +109,16 @@ a {
 #pagination {
     margin-top: 70px;
 }
+#pagination p {
+    margin-left: 20%;
+    margin-bottom: 15px;
+}
 #pagination a {
-    color: #42449D;
-    font-size: 15px;
-    margin-bottom: 14px;
-    display: block;
+    font-size: 16px;
+    color: #333;
+}
+#pagination a:hover {
+    text-decoration: underline;
 }
 
 /* footer */
@@ -131,7 +137,8 @@ a {
 
 /* post */
 #post {
-    margin-top: 70px;
+    margin-top: 100px;
+    padding-bottom: 50px;
 }
 .left, .right {
     display: inline-block;
@@ -171,6 +178,7 @@ a {
 }
 .relate {
     margin-top: 70px;
+    margin-left: 20%;
 }
 .relate p {
     margin-bottom: 16px;
