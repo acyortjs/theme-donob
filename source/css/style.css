@@ -38,6 +38,7 @@ a {
 /* header */
 .header {
     padding-top: 70px;
+    border-top: 3px solid #333;
 }
 .header .center {
     position: relative;
