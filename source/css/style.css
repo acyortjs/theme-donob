@@ -35,6 +35,11 @@ a {
     margin-right: auto;
 }
 
+/* thumb image */
+#thumb {
+    position: absolute;
+}
+
 /* header */
 .header {
     padding-top: 70px;
