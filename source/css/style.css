@@ -139,6 +139,7 @@ a {
     border-top: 1px solid #eee;
     padding: 50px 0;
     font-size: 14px;
+    line-height: 1.4;
 }
 .footer a {
     text-decoration: underline;
@@ -429,4 +430,40 @@ pre code {
 
 .hljs-strong {
   font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding-top: 50px;
+    }
+    .menu {
+        position: static;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 100px;
+    }
+    .menu a {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    #posts {
+        margin-top: 0;
+    }
+    .year {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .entry {
+        margin-left: 0;
+        width: 100%;
+    }
+    #pagination {
+        margin-top: 0;
+    }
+    #pagination p {
+        margin-left: 0;
+    }
+    .footer .center {
+        padding: 30px 0;
+    }
 }
