@@ -37,13 +37,23 @@
         <p><span></span><a rel="all" href="{{ data.config.root }}/">VIEW ALL POSTS</a></p>
     </div>
 
+    <div class="comments">
+        <div id="disqus_thread"></div>
+    </div>
+
 </div>
 {% endblock %}
 
 {% block script %}
-{% if data.config.comment %}
 {% if data.config.comment.disqus %}
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//{{ data.config.comment.disqus }}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
 {% else %}
-{% endif %}
 {% endif %}
 {% endblock %}

@@ -37,7 +37,7 @@ a {
 
 .main {
     position: relative;
-    background: rgba(255,255,255,.9);
+    background: rgba(255,255,255,.93);
 }
 #thumb {
     position: fixed;
@@ -202,6 +202,9 @@ a {
 .relate span {
     width: 60px;
     display: inline-block;
+}
+.comments {
+    margin: 100px 20% 0;
 }
 
 /* article content */

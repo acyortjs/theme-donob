@@ -68,6 +68,6 @@ function full(img, w, h) {
         img.style.height = _width * ratio +'px';
     }
 
-    img.style.left = (_width - img.style.width) / 2 +'px';
-    img.style.top = (_height - img.style.height) / 2 +'px';
+    img.style.left = (_width - parseInt(img.style.width)) / 2 +'px';
+    img.style.top = (_height - parseInt(img.style.height)) / 2 +'px';
 }

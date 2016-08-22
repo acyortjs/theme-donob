@@ -6,7 +6,7 @@
     {% set post = helper.post(id) %}
 
     {% set year %}
-    {% set post.year = helper.time(post.updated, 'YYYY') %}
+    {% set post.year = helper.time(post.created, 'YYYY') %}
     {% if post.year !== year %}
     {% set year = post.year %}
         <p class="year">{{ year }}</p>
