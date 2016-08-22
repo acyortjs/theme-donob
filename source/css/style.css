@@ -35,9 +35,13 @@ a {
     margin-right: auto;
 }
 
-/* thumb image */
+.main {
+    position: relative;
+    background: rgba(255,255,255,.9);
+}
 #thumb {
-    position: absolute;
+    position: fixed;
+    transition: opacity .3s ease;
 }
 
 /* header */

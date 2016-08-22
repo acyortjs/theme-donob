@@ -30,15 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.insertBefore(dimg, document.body.firstChild)
 
             if (images.indexOf(image) > -1) {
-                dimg.style.opacity = 1;
-                dimg.src = image;
+                show(dimg, image)
             } else {
 
                 var img = new Image();
                 img.onload = function() {
                     images.push(image)
-                    dimg.style.opacity = 1;
-                    dimg.src = image;
+                    show(dimg, image)
                 }
                 img.src = image
 
@@ -48,3 +46,28 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
 })
+
+function show(img, src) {
+    img.src = src;
+    setTimeout(function() {
+        full(img, img.width, img.height)
+        img.style.opacity = 1;
+    }, 0)
+}
+
+function full(img, w, h) {
+    var _height = window.innerHeight,
+        _width = window.innerWidth,
+        ratio = h / w;
+
+    if (_height / _width > ratio) {
+        img.style.height = _height +'px';
+        img.style.width = _height / ratio +'px';
+    } else {
+        img.style.width = _width +'px';
+        img.style.height = _width * ratio +'px';
+    }
+
+    img.style.left = (_width - img.style.width) / 2 +'px';
+    img.style.top = (_height - img.style.height) / 2 +'px';
+}
