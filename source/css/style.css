@@ -279,16 +279,32 @@ a {
 }
 .content ul, .content ol {
     margin: 10px 0;
-    padding-left: 30px;
+    list-style: none;
+    padding-left: 0;
 }
-.content ul li {
-    list-style: disc;
+.content li {
     margin-top: 4px;
     line-height: 1.6;
+    counter-increment: counter;
 }
-.content ol li {
-    list-style: decimal;
-    margin-top: 4px;
+.content ul li:before {
+    margin-right: 5px;
+    content: '·';
+    float: left;
+    font-weight: bold;
+    color: #333;
+}
+.content ol li:before {
+    content: counter(counter);
+    float: left;
+    margin-right: 10px;
+    padding-right: 6px;
+    background: linear-gradient(#666, #666);
+    background-size: 3px 3px;
+    background-position: right 15px;
+    background-repeat: no-repeat;
+}
+.content li p {
     line-height: 1.6;
 }
 .content img {
