@@ -47,9 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
+var T;
+window.addEventListener('resize', function() {
+    clearTimeout(T)
+
+    T = setTimeout(function() {
+        var thumb = document.querySelector('#thumb');
+        if (thumb && thumb.getAttribute('width')) {
+            full(thumb, thumb.getAttribute('width'), thumb.getAttribute('height'))
+        }
+    }, 100)
+})
+
 function show(img, src) {
     img.src = src;
     setTimeout(function() {
+        img.setAttribute('width', img.width)
+        img.setAttribute('height', img.height)
+
         full(img, img.width, img.height)
         img.style.opacity = 1;
     }, 0)
