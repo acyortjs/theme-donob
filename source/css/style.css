@@ -29,19 +29,10 @@ a {
 }
 
 .center {
-    max-width: 1000px;
+    max-width: 720px;
     width: 92%;
     margin-left: auto;
     margin-right: auto;
-}
-
-.main {
-    position: relative;
-    background: rgba(255,255,255,.93);
-}
-#thumb {
-    position: fixed;
-    transition: opacity .3s ease;
 }
 
 /* header */
@@ -150,19 +141,6 @@ a {
 #post {
     margin-top: 100px;
     padding-bottom: 50px;
-}
-.left, .right {
-    display: inline-block;
-    margin-top: 40px;
-    vertical-align: top;
-}
-.left {
-    width: 60%;
-    margin-left: 20%;
-}
-.right {
-    width: 17%;
-    margin-left: 3%;
 }
 .title {
     color: #222;
@@ -416,14 +394,14 @@ table tr th :last-child, table tr td :last-child {
 }
 
 pre {
-  width: 640px;
+  width: 760px;
+  margin-left: -20px;
   position: relative;
   background: #2b303b;
-  margin-left: -20px;
   border-radius: 3px;
 }
 pre code {
-  max-width: 600px;
+  max-width: 720px;
   width: 92%;
   background: transparent;
   margin: 0 auto;

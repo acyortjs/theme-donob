@@ -7,20 +7,16 @@
 {% block content %}
 <div id="post" class="center">
 
+    <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
+
     <h1 class="title">{{ post.title }}</h1>
 
-    <div class="left">
-        <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
-    </div><!--
+    <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
 
- --><div class="right">
-        <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
-
-        <div class="cat">
-        {% for category in post.categories %}
-        <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
-        {% endfor %}
-        </div>
+    <div class="cat">
+    {% for category in post.categories %}
+    <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
+    {% endfor %}
     </div>
 
     <div class="relate">
