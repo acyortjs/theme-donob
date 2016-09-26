@@ -416,13 +416,11 @@ table tr th :last-child, table tr td :last-child {
 }
 
 pre {
-  width: 100vw;
+  width: 640px;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   background: #2b303b;
+  margin-left: -20px;
+  border-radius: 3px;
 }
 pre code {
   max-width: 600px;
@@ -447,7 +445,15 @@ pre code {
   font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+    pre {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        border-radius: 0;
+    }
     .header {
         padding-top: 50px;
     }
