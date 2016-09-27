@@ -3,9 +3,13 @@
         <a class="logo" href="{{ data.config.root }}/">{{ data.config.title }}</a>
 
         <div class="menu">
-        {% for menu in data.config.menu %}
-        <a href="{{ menu }}">{{ loop.key }}</a>
-        {% endfor %}
+            <div class="menuicon"></div>
+
+            <div class="menuitem">
+            {% for menu in data.config.menu %}
+            <a href="{{ menu }}">{{ loop.key }}</a>
+            {% endfor %}
+            </div>
         </div>
     </div>
 </div>
