@@ -161,7 +161,6 @@ a {
     margin-top: 70px;
 }
 #pagination p {
-    margin-left: 20%;
     margin-bottom: 15px;
 }
 #pagination a {
@@ -246,6 +245,7 @@ a {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
+    text-align: justify;
 }
 .content p:first-child {
     margin-top: 20px;
@@ -475,7 +475,7 @@ pre code {
   font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 760px) {
     pre {
         width: 100vw;
         left: 50%;
@@ -485,17 +485,7 @@ pre code {
         border-radius: 0;
     }
     .header {
-        padding-top: 50px;
-    }
-    .menu {
-        position: static;
-        display: inline-block;
-        vertical-align: top;
-        margin-left: 100px;
-    }
-    .menu a {
-        display: block;
-        margin: 0 0 10px 0;
+        padding: 50px 0 30px;
     }
     #posts {
         margin-top: 0;
@@ -510,9 +500,6 @@ pre code {
     }
     #pagination {
         margin-top: 0;
-    }
-    #pagination p {
-        margin-left: 0;
     }
     .footer {
         margin-top: 50px;
