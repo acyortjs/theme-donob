@@ -14,7 +14,7 @@
 
         <div class="entry">
             {% if post.thumb %}
-            <a data-thumb="{{ post.thumb }}" href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ post.title }}</a>
             {% else %}
             <a href="{{ post.url }}">{{ post.title }}</a>
             {% endif %}
