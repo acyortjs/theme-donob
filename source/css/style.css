@@ -218,6 +218,9 @@ a {
 .relate p {
     margin-bottom: 16px;
 }
+.relate p:last-child {
+    margin-top: 30px;
+}
 .relate a {
     color: #333;
 }
@@ -333,11 +336,7 @@ a {
     line-height: 1.6;
 }
 .content img {
-    margin-top: 14px;
-    margin-bottom: 14px;
-    display: block;
     max-width: 100%;
-    height: auto;
 }
 code {
     background: #f7f7f7;
