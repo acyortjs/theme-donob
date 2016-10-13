@@ -166,9 +166,6 @@ a {
 }
 
 /* footer */
-.footer {
-    margin-top: 70px;
-}
 .footer .center {
     border-top: 1px solid #eee;
     padding: 50px 0;
@@ -229,7 +226,7 @@ a {
     display: inline-block;
 }
 .comments {
-    margin: 100px 0 0;
+    margin: 70px 0 0;
 }
 
 /* article content */
@@ -241,7 +238,6 @@ a {
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 16px;
-    text-align: justify;
 }
 .content p:first-child {
     margin-top: 20px;
@@ -488,9 +484,6 @@ pre code {
     }
     #pagination {
         margin-top: 0;
-    }
-    .footer {
-        margin-top: 50px;
     }
     .footer .center {
         padding: 30px 0;
