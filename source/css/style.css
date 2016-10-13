@@ -166,6 +166,9 @@ a {
 }
 
 /* footer */
+.footer {
+    margin-top: 70px;
+}
 .footer .center {
     border-top: 1px solid #eee;
     padding: 50px 0;
