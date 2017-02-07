@@ -2,9 +2,9 @@
 AcyOrt theme donob
 
 ## demo
-http://acyort.github.io/
+http://acyortjs.github.io/
 
 ## Install
 ```bash
-$ git clone git@github.com:AcyOrt/theme-donob.git themes/donob
+$ git clone git@github.com:acyortjs/theme-donob.git themes/donob
 ```
