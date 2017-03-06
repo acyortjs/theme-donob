@@ -3,10 +3,10 @@
 {% import 'partials/posts.html' as posts %}
 
 {% block title %}
-{{ data.config.title }}
+{{ config.title }}
 {% endblock %}
 
 {% block content %}
-{{ posts.render(index, helper) }}
-{{ pagination.render(index) }}    
+{{ posts.render(page, post, time) }}
+{{ pagination.render(page) }}    
 {% endblock %}

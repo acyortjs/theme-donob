@@ -2,11 +2,11 @@
 
 <div id="pagination" class="center">
     {% if pagination.prev %}
-    <p><a rel="prev" href="{{ pagination.prev }}">Newer Posts →</a></p>
+    <p><a rel="prev" href="{{ pagination.prev }}">{{ __(pager.prev) }}</a></p>
     {% endif %}
 
     {% if pagination.next %}
-    <p><a rel="next" href="{{ pagination.next }}">Older Posts →</a></p>
+    <p><a rel="next" href="{{ pagination.next }}">{{ __(pager.next) }}</a></p>
     {% endif %}
 </div>
 

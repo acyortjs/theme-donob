@@ -1,36 +1,36 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-{{ post.title }} - {{ data.config.title }}
+{{ page.title }} - {{ config.title }}
 {% endblock %}
 
 {% block content %}
 <div id="post" class="center">
 
-    <p class="time">{{ helper.time(post.created, 'MMMM DD, YYYY') }}</p> 
+    <p class="time">{{ time(page.created, 'MMMM DD, YYYY') }}</p> 
 
-    <h1 class="title">{{ post.title }}</h1>
+    <h1 class="title">{{ page.title }}</h1>
 
-    <div class="content">{% autoescape false %}{{ post.body }}{% endautoescape %}</div>
+    <div class="content">{% autoescape false %}{{ post.content }}{% endautoescape %}</div>
 
     <div class="cat">
-    {% for category in post.categories %}
+    {% for category in page.categories %}
     <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
     {% endfor %}
     </div>
 
     <div class="relate">
-        {% if post.prev %}
-        {% set prev = helper.post(post.prev) %}
+        {% if page.prev %}
+        {% set prev = post(page.prev) %}
         <p><span>PREV: </span><a rel="prev" href="{{ prev.url }}">{{ prev.title }}</a></p>
         {% endif %}
 
-        {% if post.next %}
-        {% set next = helper.post(post.next) %}
+        {% if page.next %}
+        {% set next = post(page.next) %}
         <p><span>NEXT: </span><a rel="next" href="{{ next.url }}">{{ next.title }}</a></p>
         {% endif %}
 
-        <p><span></span><a rel="all" href="{{ data.config.root }}/">View All Posts</a></p>
+        <p><span></span><a rel="all" href="{{ url(config.root) }}">View All Posts</a></p>
     </div>
 
     <div class="comments">
@@ -41,11 +41,11 @@
 {% endblock %}
 
 {% block script %}
-{% if data.config.comment.disqus %}
+{% if config.disqus %}
 <script>
 (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = '//{{ data.config.comment.disqus }}.disqus.com/embed.js';
+    s.src = '//{{ config.disqus }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
 })();

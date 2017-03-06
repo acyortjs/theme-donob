@@ -1,13 +1,13 @@
 <div class="header">
     <div class="center">
-        <a class="logo" href="{{ data.config.root }}/">{{ data.config.title }}</a>
+        <a class="logo" href="{{ url(config.root) }}/">{{ config.title }}</a>
 
         <div class="menu">
             <div class="menuicon"></div>
 
             <div class="menuitem">
-            {% for menu in data.config.menu %}
-            <a href="{{ menu }}">{{ loop.key }}</a>
+            {% for m in config.menu %}
+            <a href="{{ url(m) }}">{{ loop.key }}</a>
             {% endfor %}
             </div>
         </div>

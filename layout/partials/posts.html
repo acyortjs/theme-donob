@@ -1,25 +1,20 @@
-{% macro render(type, helper) %}
+{% macro render(page, post, time) %}
 
 <div id="posts" class="center">
 
-    {% for id in type.posts %}
-    {% set post = helper.post(id) %}
+    {% for id in page.posts %}
+    {% set p = post(id) %}
 
     {% set year %}
-    {% set post.year = helper.time(post.created, 'YYYY') %}
-    {% if post.year !== year %}
-    {% set year = post.year %}
+    {% set p.year = time(p.created, 'YYYY') %}
+    {% if p.year !== year %}
+    {% set year = p.year %}
         <p class="year">{{ year }}</p>
     {% endif %}
 
         <div class="entry">
-            {% if post.thumb %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            {% else %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            {% endif %}
-
-            <span>{{ helper.time(post.updated, 'MMMM DD') }}</span>
+            <a href="{{ url(p.url) }}">{{ p.title }}</a>
+            <span>{{ time(post.updated, 'MMMM DD') }}</span>
         </div>
     {% endfor %}
 

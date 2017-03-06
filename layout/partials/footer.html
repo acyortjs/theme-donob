@@ -1,6 +1,9 @@
 <div class="footer">
     <div class="center">
-        {{ data.config.title }} / powered by <a target="_blank" href="https://github.com/AcyOrt/acyort">AcyOrt</a> / <a target="_blank" href="{{ data.config.root }}/{{ data.config.rss }}">RSS</a>
+        {{ config.title }} / 
+        powered by <a target="_blank" href="https://github.com/acyortjs/acyort">AcyOrt</a> / 
+        <a target="_blank" href="{{ url(config.rss) }}">RSS</a> /
+        <a target="_blank" href="https://github.com/{{ config.user }}/{{ config.repository }}/issues">{{ __('title.source') }}</a>
     </div>
 </div>
 
