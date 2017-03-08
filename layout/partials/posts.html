@@ -14,7 +14,7 @@
 
         <div class="entry">
             <a href="{{ url(p.url) }}">{{ p.title }}</a>
-            <span>{{ time(post.updated, 'MMMM DD') }}</span>
+            <span>{{ time(p.updated, 'MMMM DD') }}</span>
         </div>
     {% endfor %}
 
