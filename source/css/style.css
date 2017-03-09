@@ -441,39 +441,47 @@ table tr th :last-child, table tr td :last-child {
 
 .hljs {
     background: #2b303b;
-    border-radius: 3px;
-    padding: 15px 10px;
     overflow-x: auto;
     font-size: 14px;
     margin-bottom: 16px;
+    border-radius: 3px;
+    width: 760px;
+    margin-left: -20px;
 }
 .hljs pre {
     white-space: pre;
 }
 .hljs table {
     margin-bottom: 0;
-    line-height: 1.4;
 }
 .hljs .mark {
     display: none;
 }
-.hljs tr, .hljs td, .hljs code {
+.hljs tr, .hljs td {
     border: none;
     background: transparent;
     padding: 0;
 }
-.hljs .line {
+.hljs .line pre {
     text-align: right;
     color: #c0c5ce;
-    padding-right: 10px;
+    background: #262a33;
+    padding: 10px;
 }
-.code pre code {
-  background: transparent;
-  display: block;
-  color: #c0c5ce;
-  font-family: monospace;
-  border: none;
-  margin-right: 10px;
+.hljs pre div {
+    line-height: 1.6;
+}
+.hljs .code {
+    padding: 10px;
+}
+.code pre {
+    line-height: 1.6;
+    background: transparent;
+    display: block;
+    color: #c0c5ce;
+    font-family: monospace;
+    border: none;
+    margin-right: 10px;
 }
 
 .hljs-emphasis {
@@ -485,13 +493,17 @@ table tr th :last-child, table tr td :last-child {
 }
 
 @media screen and (max-width: 760px) {
-    pre {
+    .hljs {
+        position: relative;
         width: 100vw;
         left: 50%;
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
         border-radius: 0;
+    }
+    .hljs .line {
+        display: none;
     }
     .header {
         padding: 50px 0 30px;
