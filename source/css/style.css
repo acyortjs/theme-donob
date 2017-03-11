@@ -505,6 +505,12 @@ table tr th :last-child, table tr td :last-child {
     .hljs .line {
         display: none;
     }
+    .hljs table {
+        margin-left: 4%;
+    }
+    .hljs .code {
+        padding-left: 0;
+    }
     .header {
         padding: 50px 0 30px;
     }
@@ -517,7 +523,15 @@ table tr th :last-child, table tr td :last-child {
     .footer .center {
         padding: 30px 0;
     }
-
+    .entry a {
+        display: block;
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+    .entry span {
+        float: none;
+        font-size: 13px;
+    }
     #post {
         margin-top: 50px;
     }
