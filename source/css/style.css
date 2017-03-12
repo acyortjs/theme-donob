@@ -37,90 +37,52 @@ a {
 
 /* header */
 .header {
-    padding-top: 70px;
-    border-top: 3px solid #333;
-}
-.header .center {
     position: relative;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+}
+.header:before {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="500"><rect x="0" width="39" height="100%" style="fill:#28a1d8"/><rect x="39" width="2" height="100%" style="fill:#248bc7"/><rect x="41" width="11" height="100%" style="fill:#1e3955"/><rect x="52" width="56" height="100%" style="fill:#2f5132"/><rect x="108" width="160" height="100%" style="fill:#416828"/><rect x="268" width="4" height="100%" style="fill:#7eaa29"/><rect x="272" width="11" height="100%" style="fill:#dcbd42"/><rect x="283" width="7" height="100%" style="fill:#dcad27"/><rect x="290" width="6" height="100%" style="fill:#e39a23"/><rect x="296" width="26" height="100%" style="fill:#cc554c"/><rect x="322" width="16" height="100%" style="fill:#ca473f"/><rect x="338" width="12" height="100%" style="fill:#a72834"/><rect x="350" width="62" height="100%" style="fill:#735675"/><rect x="412" width="61" height="100%" style="fill:#653e66"/><rect x="473" width="27" height="100%" style="fill:#3b315b"/></svg>');
+    background-repeat: repeat-x;
+    content: '';
+    height: 3px;
+}
+.header a {
+    color: #444;
+    padding: 20px 20px 18px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: sans-serif;
+    border-right: 1px solid #eee;
+}
+.header a:hover {
+    background: #fff4cc;
 }
 .logo {
-    font-family: sans-serif;
+    font-weight: bold;
     font-size: 18px;
-    color: #333;
     letter-spacing: 1px;
-    position: relative;
-}
-.logo:after {
-    content: '';
-    height: 3px;
-    background: #ddd;
-    width: 60%;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-}
-.menuicon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 16px;
-    height: 3px;
-    border-top: 11px solid #333; 
-    border-bottom: 11px solid #333; 
-    border-left: 5px solid #333;
-    border-right: 5px solid #333;
-    background: #fff;
-    border-radius: 2px;
-    cursor: pointer;
-}
-.menuicon:before, .menuicon:after {
-    content: '';
-    display: block;
-    width: 16px;
-    height: 3px;
-    background: #fff;
-    margin-top: 9px;
-}
-.menuicon:before {
-    margin-top: -6px;
 }
 .menu {
+    display: inline-block;
+    margin-top: 2px;
+    vertical-align: middle;
+}
+.social {
     position: absolute;
     right: 0;
-    top: 0;
-    font-family: sans-serif;
+    top: 3px;
 }
-.menu.active .menuitem {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.social a:first-child {
+    border-left: 1px solid #eee;
 }
-.menuitem {
-    transition: all .3s ease;
-    opacity: 0;
-    visibility: hidden;
-    margin-right: 30px;
-    transform: translateY(-10px);
-}
-.menuitem a {
-    font-size: 14px;
-    color: #fff;
-    padding: 10px;
-    background: #333;
-    display: block;
-    border-bottom: 1px solid #222;
-}
-.menuitem a:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-.menuitem a:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom: 0;
-}
-.menuitem a:hover {
-    background: #222;
+.social svg {
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
 }
 
 /* posts */
@@ -167,11 +129,11 @@ a {
 
 /* footer */
 .footer {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 .footer .center {
     border-top: 1px solid #eee;
-    padding: 50px 0;
+    padding: 30px 0;
     font-size: 14px;
     line-height: 1.4;
 }
@@ -511,17 +473,14 @@ table tr th :last-child, table tr td :last-child {
     .hljs .code {
         padding-left: 0;
     }
-    .header {
-        padding: 50px 0 30px;
+    .social {
+        display: none;
     }
     #posts {
         margin-top: 0;
     }
     #pagination {
         margin-top: 0;
-    }
-    .footer .center {
-        padding: 30px 0;
     }
     .entry a {
         display: block;
