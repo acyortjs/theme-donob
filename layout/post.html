@@ -13,9 +13,9 @@
 
     <div class="content">{% autoescape false %}{{ page.content }}{% endautoescape %}</div>
 
-    <div class="cat">
-    {% for category in page.categories %}
-    <p><span>#</span> <a href="{{ category.url }}">{{ category.name}}</a></p>
+    <div class="tags">
+    {% for tag in page.tags %}
+    <a href="{{ url(tag.url) }}">#{{ tag.name}}</a>
     {% endfor %}
     </div>
 
@@ -29,8 +29,6 @@
         {% set next = post(page.next) %}
         <p><span>NEXT: </span><a rel="next" href="{{ next.url }}">{{ next.title }}</a></p>
         {% endif %}
-
-        <p><span></span><a rel="all" href="{{ url(config.root) }}">View All Posts</a></p>
     </div>
 
     <div class="comments">

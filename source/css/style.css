@@ -26,6 +26,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 .center {
@@ -153,35 +154,31 @@ a {
     line-height: 1.4;
     margin-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
 }
 .time {
     color: #999;
     font-size: 14px;
 }
-.cat {
-    margin-top: 70px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+.tags {
+    margin: 70px 0 30px;
 }
-.cat p {
-    margin-bottom: 10px;
-    color: #999;
+.tags a {
+    color: #494949;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 5px 7px;
+    font-size: 14px;
 }
-.cat a {
-    color: #333;
-}
-.cat a:hover {
-    text-decoration: underline;
+.tags a:hover {
+    background: #fff4cc;
 }
 .relate {
     margin-top: 20px;
 }
 .relate p {
     margin-bottom: 16px;
-}
-.relate p:last-child {
-    margin-top: 30px;
 }
 .relate a {
     color: #333;
@@ -235,21 +232,15 @@ a {
     padding-bottom: 12px;
 }
 .content blockquote {
-    margin: 36px 0;
-    color: #7b7b7b;
+    margin: 30px 0;
+    border-left: 5px solid #ccc;
+    color: #555;
     position: relative;
-    padding: 0 32px;
-}
-.content blockquote:before {
-    content: '"';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 36px;
+    padding: 16px 20px;
+    background: #eee;
 }
 .content blockquote p {
-    margin-bottom: 8px;
-    font-style: italic;
+    margin: 0!important;
 }
 .content a {
     color: #333;
