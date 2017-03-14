@@ -199,7 +199,6 @@ a {
 /* post */
 #post {
     margin-top: 100px;
-    padding-bottom: 50px;
 }
 .title {
     color: #222;
@@ -220,6 +219,7 @@ a {
 .content {
     color: #333;
     margin-top: 50px;
+    word-break: break-all;
 }
 .content p {
     font-size: 16px;
@@ -485,14 +485,50 @@ table tr th :last-child, table tr td :last-child {
     .hljs .code {
         padding-left: 0;
     }
+    .header a {
+        font-size: 14px;
+        padding: 16px 20px 14px;
+    }
     .social {
         display: none;
+    }
+    .list {
+        margin-top: 50px;
+    }
+    .list li {
+        margin-bottom: 50px;
+    }
+    .list li > a {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .list li > div p {
+        font-size: 14px;
+    }
+    .footer {
+        padding-top: 70px;
+    }
+    .footer .center {
+        font-size: 13px;
     }
     #posts {
         margin-top: 0;
     }
+    #posts h2 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .year {
+        font-size: 16px;
+    }
     #pagination {
         margin-top: 0;
+        width: 260px;
+    }
+    #pagination a, #pagination span {
+        height: 27px;
+        line-height: 28px;
+        font-size: 14px;
     }
     .entry a {
         display: block;
@@ -507,6 +543,12 @@ table tr th :last-child, table tr td :last-child {
         margin-top: 50px;
     }
     .title {
-        font-size: 26px;
+        font-size: 24px;
+    }
+    .content {
+        margin-top: 20px;
+    }
+    .content p {
+        font-size: 14px;
     }
 }
