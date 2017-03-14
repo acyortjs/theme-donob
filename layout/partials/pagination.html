@@ -2,11 +2,17 @@
 
 <div id="pagination" class="center">
     {% if pagination.prev %}
-    <p><a rel="prev" href="{{ pagination.prev }}">{{ __('pager.prev') }}</a></p>
+    <a rel="prev" href="{{ pagination.prev }}">{{ __('pager.prev') }}</a>
+    {% else %}
+    <a class="disabled">{{ __('pager.prev') }}</a>
     {% endif %}
 
+    <span>{{ pagination.current }} / {{ pagination.total }}</span>
+
     {% if pagination.next %}
-    <p><a rel="next" href="{{ pagination.next }}">{{ __('pager.next') }}</a></p>
+    <a rel="next" href="{{ pagination.next }}">{{ __('pager.next') }}</a>
+    {% else %}
+    <a class="disabled">{{ __('pager.next') }}</a>
     {% endif %}
 </div>
 

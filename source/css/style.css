@@ -115,17 +115,41 @@ a {
 
 /* pagination */
 #pagination {
-    margin-top: 70px;
-}
-#pagination p {
-    margin-bottom: 15px;
+    margin-top: 50px;
+    border: 1px solid #eee;
+    width: 300px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 0;
 }
 #pagination a {
+    display: inline-block;
+    height: 34px;
     font-size: 16px;
+    line-height: 34px;
     color: #333;
+    width: 30%;
+    vertical-align: middle;
+}
+#pagination span {
+    height: 34px;
+    font-size: 14px;
+    line-height: 34px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+    box-sizing: border-box;
+}
+#pagination a.disabled {
+    color: #999;
 }
 #pagination a:hover {
-    text-decoration: underline;
+    background: #fff4cc;
+}
+#pagination a.disabled:hover {
+    background: #fff;
 }
 
 /* footer */

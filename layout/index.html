@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 {% import 'partials/pagination.html' as pagination %}
-{% import 'partials/posts.html' as posts %}
+{% import 'partials/posts.html' as postsTpl %}
 
 {% block title %}
 {{ config.title }}
 {% endblock %}
 
 {% block content %}
-{{ posts.render(page, post, time) }}
-{{ pagination.render(page) }}    
+{{ postsTpl.render(page, post, time) }}
+{{ pagination.render(page, posts) }}    
 {% endblock %}
