@@ -154,11 +154,13 @@ a {
 
 /* footer */
 .footer {
-    margin-top: 50px;
+    height: 100px;
+    padding-top: 180px;
+    background-image: url(../footer.jpg);
+    background-size: cover;
+    text-align: center;
 }
 .footer .center {
-    border-top: 1px solid #eee;
-    padding: 30px 0;
     font-size: 14px;
     line-height: 1.4;
 }
@@ -188,7 +190,7 @@ a {
 }
 .tags a {
     color: #494949;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     border-radius: 3px;
     display: inline-block;
     margin-right: 3px;
@@ -261,14 +263,13 @@ a {
     color: #555;
     position: relative;
     padding: 16px 20px;
-    background: #eee;
+    background: #f8f8f8;
 }
 .content blockquote p {
     margin: 0!important;
 }
 .content a {
-    color: #333;
-    text-decoration: underline;
+    background: #fff4cc;
 }
 .content hr {
     border: none;
