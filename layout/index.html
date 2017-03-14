@@ -1,12 +1,24 @@
 {% extends 'layout.html' %}
 {% import 'partials/pagination.html' as pagination %}
-{% import 'partials/posts.html' as postsTpl %}
 
 {% block title %}
 {{ config.title }}
 {% endblock %}
 
 {% block content %}
-{{ postsTpl.render(page, post, time) }}
+
+<ul class="list center">
+{% for id in page.posts %}
+{% set p = post(id) %}
+
+<li>
+<p>{{ time(p.updated, 'MMM DD, YYYY') }}</p>
+<a href="{{ url(p.url) }}">{{ p.title }}</a>
+<div>{% autoescape false %}{{ p.summary }}{% endautoescape %}</div>
+</li>
+
+{% endfor %}
+</ul>
+
 {{ pagination.render(page, posts) }}    
 {% endblock %}
