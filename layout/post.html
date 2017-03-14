@@ -13,24 +13,6 @@
 
     <div class="content">{% autoescape false %}{{ page.content }}{% endautoescape %}</div>
 
-    <div class="tags">
-    {% for tag in page.tags %}
-    <a href="{{ url(tag.url) }}">#{{ tag.name}}</a>
-    {% endfor %}
-    </div>
-
-    <div class="relate">
-        {% if page.prev %}
-        {% set prev = post(page.prev) %}
-        <p><span>PREV: </span><a rel="prev" href="{{ prev.url }}">{{ prev.title }}</a></p>
-        {% endif %}
-
-        {% if page.next %}
-        {% set next = post(page.next) %}
-        <p><span>NEXT: </span><a rel="next" href="{{ next.url }}">{{ next.title }}</a></p>
-        {% endif %}
-    </div>
-
     <div class="comments">
         <div id="disqus_thread"></div>
     </div>
