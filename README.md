@@ -2,7 +2,7 @@
 AcyOrt theme donob
 
 ## demo
-http://acyortjs.github.io/
+http://acyort.am0200.com/
 
 ## Install
 ```bash

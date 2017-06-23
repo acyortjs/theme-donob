@@ -9,16 +9,16 @@
 
 <ul class="list center">
 {% for id in page.posts %}
-{% set p = post(id) %}
+{% set p = _post(id) %}
 
 <li>
-<p>{{ time(p.updated, 'MMM DD, YYYY') }}</p>
-<a href="{{ url(p.url) }}">{{ p.title }}</a>
+<p>{{ _time(p.updated, 'MMM DD, YYYY') }}</p>
+<a href="{{ _url(p.url) }}">{{ p.title }}</a>
 <div>{% autoescape false %}{{ p.summary }}{% endautoescape %}</div>
 </li>
 
 {% endfor %}
 </ul>
 
-{{ pagination.render(page, posts) }}    
+{{ pagination.render(page) }}
 {% endblock %}

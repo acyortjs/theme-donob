@@ -7,7 +7,7 @@
 {% block content %}
 <div id="post" class="center">
 
-    <p class="time">{{ time(page.created, 'MMMM DD, YYYY') }}</p> 
+    <p class="time">{{ _time(page.updated, 'MMMM DD, YYYY') }}</p>
 
     <h1 class="title">{{ page.title }}</h1>
 
