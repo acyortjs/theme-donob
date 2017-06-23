@@ -12,7 +12,7 @@
 {% set p = _post(id) %}
 
 <li>
-<p>{{ _time(p.updated, 'MMM DD, YYYY') }}</p>
+<p>{{ _time(p.updated, 'MMMM DD, YYYY') }}</p>
 <a href="{{ _url(p.url) }}">{{ p.title }}</a>
 <div>{% autoescape false %}{{ p.summary }}{% endautoescape %}</div>
 </li>

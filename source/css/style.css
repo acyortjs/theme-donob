@@ -8,20 +8,27 @@ body, div, h1, h2, h3, h4, h5, p, ul, li {
 }
 html {
     -webkit-text-size-adjust: 100%;
-    height: 100%;
 }
 html, body {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-font-smoothing: antialiased;
+    height: 100%;
 }
 body {
-    font-family: 'Lucida Sans', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace, 'Microsoft YaHei', 'WenQuanYi Micro Hei';
+    font-family: -apple-system-font, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
     background: #fff;
     color: #666;
+}
+
+.main {
     min-height: 100%;
+    margin-bottom: -280px;
+    padding-bottom: 280px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 a {
@@ -187,6 +194,7 @@ a {
     background-image: url(../footer.jpg);
     background-size: cover;
     text-align: center;
+    letter-spacing: 1px;
 }
 .footer .center {
     font-size: 14px;
@@ -266,7 +274,8 @@ a {
     margin: 0!important;
 }
 .content a {
-    background: #fff4cc;
+    display: inline-block;
+    border-bottom: 1px dotted #c7c7c7;
 }
 .content hr {
     border: none;
