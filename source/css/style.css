@@ -25,10 +25,10 @@ body {
 
 .main {
     min-height: 100%;
-    margin-bottom: -280px;
-    padding-bottom: 280px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    margin-bottom: -170px;
+}
+.inner {
+    padding-bottom: 170px;
 }
 
 a {
@@ -60,7 +60,7 @@ a {
 }
 .header a {
     color: #444;
-    padding: 20px 20px 18px;
+    padding: 18px 20px 16px;
     display: inline-block;
     vertical-align: middle;
     font-family: sans-serif;
@@ -154,7 +154,7 @@ a {
     border: 1px solid #eee;
     width: 300px;
     text-align: center;
-    border-radius: 3px;
+    border-radius: 1px;
     font-size: 0;
 }
 #pagination a {
@@ -189,10 +189,8 @@ a {
 
 /* footer */
 .footer {
-    height: 100px;
-    padding-top: 180px;
-    background-image: url(../footer.jpg);
-    background-size: cover;
+    height: 70px;
+    padding-top: 100px;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -211,7 +209,7 @@ a {
 }
 .title {
     color: #222;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.4;
     margin-top: 20px;
     padding-bottom: 20px;
@@ -231,15 +229,15 @@ a {
     word-break: break-all;
 }
 .content p {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.7;
     margin-bottom: 16px;
 }
 .content p:first-child {
     margin-top: 20px;
 }
 .content h1, .content h2, .content h3, .content h4, .content h5 {
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 14px;
     margin-top: 20px;
     color: #222;
@@ -263,18 +261,15 @@ a {
     padding-bottom: 12px;
 }
 .content blockquote {
-    margin: 30px 0;
-    border-left: 5px solid #ccc;
-    color: #555;
-    position: relative;
-    padding: 16px 20px;
-    background: #f8f8f8;
+    margin: 0 0 16px;
+    padding: 0 15px;
+    color: #858585;
+    border-left: 4px solid #e5e5e5;
 }
 .content blockquote p {
     margin: 0!important;
 }
 .content a {
-    display: inline-block;
     border-bottom: 1px dotted #c7c7c7;
 }
 .content hr {
@@ -513,8 +508,14 @@ table tr th :last-child, table tr td :last-child {
     .list li > div p {
         font-size: 14px;
     }
+    .main {
+        margin-bottom: -120px;
+    }
+    .inner {
+        padding-bottom: 120px;
+    }
     .footer {
-        padding-top: 70px;
+        padding-top: 50px;
     }
     .footer .center {
         font-size: 13px;
