@@ -7,7 +7,7 @@
     <a class="disabled">{{ __('pager.prev') }}</a>
     {% endif %}
 
-    <span>{{ pagination.current }} / {{ pagination.total }}</span>
+    <span>{{ _paginator(pagination) }}</span>
 
     {% if pagination.next %}
     <a rel="next" href="{{ _url(pagination.next) }}">{{ __('pager.next') }}</a>
