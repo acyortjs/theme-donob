@@ -1,23 +1,20 @@
 {% macro render(page) %}
 
 <div id="posts" class="center">
-    <h2>Archives</h2>
+  <h2>Archives</h2>
 
-    {% for id in page.posts %}
-    {% set p = _post(id) %}
+  {% for post in page.posts %}
 
-    {% set year %}
-    {% set p.year = _time(p.created, 'YYYY') %}
-    {% if p.year !== year %}
-    {% set year = p.year %}
-        <p class="year">{{ year }}</p>
-    {% endif %}
+  {% if !post.id %}
+  <p class="year">{{ post }}</p>
+  {% else %}
+  <div class="entry">
+    <a href="{{ _url(post.url) }}">{{ post.title }}</a>
+    <span>{{ _time(post.created, 'MMMM DD') }}</span>
+  </div>
+  {% endif %}
 
-        <div class="entry">
-            <a href="{{ _url(p.url) }}">{{ p.title }}</a>
-            <span>{{ _time(p.updated, 'MMMM DD') }}</span>
-        </div>
-    {% endfor %}
+  {% endfor %}
 
 </div>
 

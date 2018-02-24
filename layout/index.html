@@ -9,7 +9,7 @@
 
 <ul class="list center">
 {% for id in page.posts %}
-{% set p = _post(id) %}
+{% set p = _posts(id) %}
 
 <li>
 <p>{{ _time(p.created, 'MMMM DD, YYYY') }}</p>
