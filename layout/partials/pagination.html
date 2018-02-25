@@ -1,19 +1,21 @@
 {% macro render(pagination) %}
 
 <div id="pagination" class="center">
+  <div>
     {% if pagination.prev %}
-    <a rel="prev" href="{{ _url(pagination.prev) }}">{{ __('pager.prev') }}</a>
+    <a rel="prev" href="{{ _url(pagination.prev) }}">{{ __('prev') }}</a>
     {% else %}
-    <a class="disabled">{{ __('pager.prev') }}</a>
+    <a class="disabled">{{ __('prev') }}</a>
     {% endif %}
 
-    <span>{{ _paginator(pagination) }}</span>
+    {{ _paginator(pagination) }}
 
     {% if pagination.next %}
-    <a rel="next" href="{{ _url(pagination.next) }}">{{ __('pager.next') }}</a>
+    <a rel="next" href="{{ _url(pagination.next) }}">{{ __('next') }}</a>
     {% else %}
-    <a class="disabled">{{ __('pager.next') }}</a>
+    <a class="disabled">{{ __('next') }}</a>
     {% endif %}
+  </div>
 </div>
 
 {% endmacro %}

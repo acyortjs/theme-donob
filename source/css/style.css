@@ -23,14 +23,6 @@ body {
   color: #666;
 }
 
-.main {
-  min-height: 100%;
-  margin-bottom: -170px;
-}
-.inner {
-  padding-bottom: 170px;
-}
-
 a {
   text-decoration: none;
   color: #333;
@@ -70,9 +62,9 @@ a {
   background: #fff4cc;
 }
 .logo {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
 }
 .menu {
   display: inline-block;
@@ -150,53 +142,71 @@ a {
 
 /* pagination */
 #pagination {
-  margin-top: 50px;
-  border: 1px solid #eee;
-  width: 300px;
   text-align: center;
-  border-radius: 1px;
-  font-size: 0;
+  margin-top: 50px;
 }
-#pagination a {
+#pagination > div {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0;
   display: inline-block;
+}
+#pagination div > a {
+  display: inline-block;
+  width: 60px;
   height: 34px;
   font-size: 16px;
   line-height: 34px;
   color: #333;
-  width: 30%;
   vertical-align: middle;
+  padding: 0 12px;
 }
 #pagination span {
   height: 34px;
   font-size: 14px;
   line-height: 34px;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #ddd;
   display: inline-block;
   vertical-align: middle;
-  width: 40%;
   box-sizing: border-box;
 }
+#pagination span a {
+  width: 11px;
+  font-size: 16px;
+  display: inline-block;
+  border-left: 1px solid #ddd;
+  padding: 0 12px;
+}
+#pagination a.current,
 #pagination a.disabled {
   color: #999;
+}
+#pagination i {
+  width: 11px;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  font-style: normal;
+  padding: 0 10px;
 }
 #pagination a:hover {
   background: #fff4cc;
 }
+#pagination a.current:hover,
 #pagination a.disabled:hover {
   background: #fff;
 }
 
 /* footer */
 .footer {
-  height: 70px;
-  padding-top: 100px;
+  margin-top: 70px;
   text-align: center;
-  letter-spacing: 1px;
 }
 .footer .center {
   font-size: 14px;
+  letter-spacing: .5px;
   line-height: 1.4;
+  border-top: 1px solid #eee;
+  padding: 50px 0;
 }
 .footer a {
   text-decoration: underline;
@@ -508,16 +518,11 @@ table tr th :last-child, table tr td :last-child {
   .list li > div p {
     font-size: 14px;
   }
-  .main {
-    margin-bottom: -120px;
-  }
-  .inner {
-    padding-bottom: 120px;
-  }
   .footer {
-    padding-top: 50px;
+    margin-top: 50px;
   }
   .footer .center {
+    padding: 30px 0;
     font-size: 13px;
   }
   #posts {
@@ -532,12 +537,11 @@ table tr th :last-child, table tr td :last-child {
   }
   #pagination {
     margin-top: 0;
-    width: 260px;
-  }
-  #pagination a, #pagination span {
-    height: 27px;
-    line-height: 28px;
     font-size: 14px;
+  }
+  #pagination span {
+    width: 0;
+    overflow: hidden;
   }
   .entry a {
     display: block;

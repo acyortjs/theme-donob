@@ -15,6 +15,7 @@ Install the plugins
 
 - acyort-rss
 - acyort-archives
+- acyort-paginator
 
 The config example
 
@@ -22,9 +23,9 @@ The config example
 plugins:
   - acyort-rss
   - acyort-archives
+  - acyort-paginator
 
-rss:
-  path: rss.xml
+rss: true
 
 archives:
   per_page: 5

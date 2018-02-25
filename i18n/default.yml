@@ -1,3 +1,2 @@
-pager:
-  prev: Newer
-  next: Older
+prev: Previous
+next: Next
