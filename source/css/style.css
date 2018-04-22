@@ -128,9 +128,9 @@ a {
 }
 .list li > a {
   display: inline-block;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 20px 0;
   color: #333;
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.4;
 }
 .list li a:hover {
@@ -147,7 +147,7 @@ a {
 }
 #pagination > div {
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 5px;
   font-size: 0;
   display: inline-block;
 }
@@ -165,10 +165,12 @@ a {
   height: 34px;
   font-size: 14px;
   line-height: 34px;
-  border-right: 1px solid #ddd;
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
+}
+#pagination a[rel=next] {
+  border-left: 1px solid #ddd;
 }
 #pagination span a {
   width: 11px;
@@ -202,7 +204,7 @@ a {
   text-align: center;
 }
 .footer .center {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: .5px;
   line-height: 1.4;
   border-top: 1px solid #eee;
@@ -219,10 +221,11 @@ a {
 }
 .title {
   color: #222;
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 1.4;
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .time {
   color: #999;
@@ -272,7 +275,7 @@ a {
 }
 .content blockquote {
   margin: 0 0 16px;
-  padding: 0 15px;
+  padding: 10px 15px;
   color: #858585;
   border-left: 4px solid #e5e5e5;
 }
@@ -305,11 +308,13 @@ a {
   counter-increment: counter;
 }
 .content ul li:before {
-  margin-right: 5px;
-  content: '·';
+  margin: 10px 10px 0 0;
+  content: '';
+  background: #333;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
   float: left;
-  font-weight: bold;
-  color: #333;
 }
 .content ol > li:before {
   content: counter(counter);

@@ -13,7 +13,7 @@
     {% if pagination.next %}
     <a rel="next" href="{{ _url(pagination.next) }}">{{ __('next') }}</a>
     {% else %}
-    <a class="disabled">{{ __('next') }}</a>
+    <a rel="next" class="disabled">{{ __('next') }}</a>
     {% endif %}
   </div>
 </div>
